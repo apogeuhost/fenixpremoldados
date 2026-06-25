@@ -26,11 +26,11 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="container-page grid h-20 grid-cols-2 items-center md:grid-cols-3">
-        <Link to="/" className="flex items-center gap-3 justify-self-start" onClick={() => setOpen(false)}>
+      <div className="container-page flex h-20 items-center justify-between">
+        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logoAsset.url} alt="Fênix Pré Moldados" className="h-12 w-auto" />
         </Link>
-        <nav className="hidden items-center justify-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -42,17 +42,15 @@ function Header() {
               {n.label}
             </Link>
           ))}
-        </nav>
-        <div className="hidden justify-self-end md:block">
           <Link
             to="/contato"
             className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-soft transition hover:opacity-90"
           >
             Solicitar Orçamento
           </Link>
-        </div>
+        </nav>
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border justify-self-end md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Abrir menu"
         >
@@ -207,10 +205,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Fênix Pré Moldados — Galpões Pré-Moldados, Metálicos e Mistos" },
       { name: "description", content: "Especialistas em galpões pré-moldados, metálicos e mistos em Arcos/MG. Projetos personalizados, fabricação e execução completa de obras." },
       { name: "author", content: "Fênix Pré Moldados" },
-      { property: "og:title", content: "Fênix Pré Moldados" },
-      { property: "og:description", content: "Galpões pré-moldados, metálicos e mistos com qualidade, rapidez e bom atendimento." },
+      { property: "og:title", content: "Fênix Pré Moldados — Galpões Pré-Moldados, Metálicos e Mistos" },
+      { property: "og:description", content: "Especialistas em galpões pré-moldados, metálicos e mistos em Arcos/MG. Projetos personalizados, fabricação e execução completa de obras." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Fênix Pré Moldados — Galpões Pré-Moldados, Metálicos e Mistos" },
+      { name: "twitter:description", content: "Especialistas em galpões pré-moldados, metálicos e mistos em Arcos/MG. Projetos personalizados, fabricação e execução completa de obras." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2cbf547d-bbd0-4615-b342-2a660a67defe/id-preview-90c9e06b--71b9e97d-7f0b-4e3d-a5ef-23af60d6b6b4.lovable.app-1782396748660.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2cbf547d-bbd0-4615-b342-2a660a67defe/id-preview-90c9e06b--71b9e97d-7f0b-4e3d-a5ef-23af60d6b6b4.lovable.app-1782396748660.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
