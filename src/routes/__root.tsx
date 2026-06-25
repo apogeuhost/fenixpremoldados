@@ -26,11 +26,11 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="container-page flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+      <div className="container-page grid h-20 grid-cols-2 items-center md:grid-cols-3">
+        <Link to="/" className="flex items-center gap-3 justify-self-start" onClick={() => setOpen(false)}>
           <img src={logoAsset.url} alt="Fênix Pré Moldados" className="h-12 w-auto" />
         </Link>
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center justify-center gap-8 md:flex">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -42,15 +42,17 @@ function Header() {
               {n.label}
             </Link>
           ))}
+        </nav>
+        <div className="hidden justify-self-end md:block">
           <Link
             to="/contato"
             className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-soft transition hover:opacity-90"
           >
             Solicitar Orçamento
           </Link>
-        </nav>
+        </div>
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border justify-self-end md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Abrir menu"
         >

@@ -53,6 +53,12 @@ function PostPage() {
         </div>
       </section>
 
+      <div className="container-page -mt-10 max-w-4xl">
+        <div className="overflow-hidden rounded-xl shadow-soft">
+          <img src={post.cover} alt={post.coverAlt} className="aspect-[16/9] w-full object-cover" />
+        </div>
+      </div>
+
       <article className="py-16">
         <div className="container-page max-w-3xl space-y-5 text-lg leading-relaxed text-foreground/90">
           {post.body.map((b: { type: "h2" | "p"; text: string }, i: number) =>

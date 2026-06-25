@@ -34,20 +34,25 @@ function BlogLayout() {
       <section className="py-16">
         <div className="container-page grid gap-8 md:grid-cols-2">
           {POSTS.map((p) => (
-            <article key={p.slug} className="flex flex-col rounded-xl border border-border bg-card p-7 shadow-card transition hover:-translate-y-1 hover:shadow-soft">
-              <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <span className="inline-flex items-center gap-1"><Calendar className="h-3.5 w-3.5" />{new Date(p.date).toLocaleDateString("pt-BR")}</span>
-                <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" />{p.readingTime}</span>
-              </div>
-              <h2 className="mt-4 text-2xl font-bold leading-snug text-brand">{p.title}</h2>
-              <p className="mt-3 flex-1 text-muted-foreground">{p.excerpt}</p>
-              <Link
-                to="/blog/$slug"
-                params={{ slug: p.slug }}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
-              >
-                Ler artigo <ArrowRight className="h-4 w-4" />
+            <article key={p.slug} className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+              <Link to="/blog/$slug" params={{ slug: p.slug }} className="block aspect-[16/10] overflow-hidden bg-muted">
+                <img src={p.cover} alt={p.coverAlt} loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
               </Link>
+              <div className="flex flex-1 flex-col p-7">
+                <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                  <span className="inline-flex items-center gap-1"><Calendar className="h-3.5 w-3.5" />{new Date(p.date).toLocaleDateString("pt-BR")}</span>
+                  <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" />{p.readingTime}</span>
+                </div>
+                <h2 className="mt-4 text-2xl font-bold leading-snug text-brand">{p.title}</h2>
+                <p className="mt-3 flex-1 text-muted-foreground">{p.excerpt}</p>
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: p.slug }}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+                >
+                  Ler artigo <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </article>
           ))}
         </div>
