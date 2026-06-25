@@ -1,9 +1,14 @@
+import post1Asset from "@/assets/post-1.jpg.asset.json";
+import post2Asset from "@/assets/post-2.jpg.asset.json";
+
 export type BlogPost = {
   slug: string;
   title: string;
   excerpt: string;
   date: string;
   readingTime: string;
+  cover: string;
+  coverAlt: string;
   body: { type: "h2" | "p"; text: string }[];
 };
 
@@ -14,6 +19,8 @@ export const POSTS: BlogPost[] = [
     excerpt: "Entenda por que investir em galpões logísticos pré-moldados é uma das estratégias mais promissoras do mercado imobiliário atual.",
     date: "2024-02-12",
     readingTime: "6 min",
+    cover: post1Asset.url,
+    coverAlt: "Galpão logístico amplo com estruturas pré-moldadas armazenadas",
     body: [
       { type: "p", text: "O mercado de aluguel de galpões logísticos tem se mostrado um ótimo investimento cada vez mais promissor, impulsionado pelo crescente interesse por espaços eficientes para armazenagem e distribuição. Nesse cenário, investir nesse tipo de imóvel revela-se uma estratégia inteligente, proporcionando inúmeras vantagens que contribuem para o sucesso do empreendimento." },
       { type: "h2", text: "Alta Demanda do Setor Logístico" },
@@ -38,6 +45,8 @@ export const POSTS: BlogPost[] = [
     excerpt: "Como as estruturas pré-fabricadas em concreto estão transformando a construção civil brasileira com agilidade, sustentabilidade e qualidade.",
     date: "2024-03-04",
     readingTime: "8 min",
+    cover: post2Asset.url,
+    coverAlt: "Montagem de estrutura pré-fabricada de concreto com guindaste",
     body: [
       { type: "p", text: "A indústria da construção civil no Brasil está passando por uma transformação significativa, impulsionada pelo avanço das tecnologias e pela busca por métodos mais eficientes e sustentáveis. Nesse contexto, a revolução na construção civil gerada pelos pré-fabricados em concreto vem conquistando cada vez mais o mercado brasileiro. Com inúmeras vantagens em relação aos métodos tradicionais de construção, essas estruturas vêm se destacando por sua agilidade, sustentabilidade e qualidade superior." },
       { type: "h2", text: "A Era das Estruturas Pré-Fabricadas" },
