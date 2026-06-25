@@ -26,11 +26,13 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="container-page flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="Fênix Pré Moldados" className="h-12 w-auto" />
-        </Link>
-        <nav className="hidden items-center gap-8 md:flex">
+      <div className="container-page grid h-20 grid-cols-2 items-center md:grid-cols-3">
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+            <img src={logoAsset.url} alt="Fênix Pré Moldados" className="h-12 w-auto" />
+          </Link>
+        </div>
+        <nav className="hidden items-center justify-center gap-8 md:flex">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -42,20 +44,24 @@ function Header() {
               {n.label}
             </Link>
           ))}
+        </nav>
+        <div className="hidden items-center justify-end md:flex">
           <Link
             to="/contato"
             className="rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-soft transition hover:opacity-90"
           >
             Solicitar Orçamento
           </Link>
-        </nav>
-        <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border md:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Abrir menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        </div>
+        <div className="flex justify-end md:hidden">
+          <button
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Abrir menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="border-t border-border md:hidden">
