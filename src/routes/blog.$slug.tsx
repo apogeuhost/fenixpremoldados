@@ -55,7 +55,7 @@ function PostPage() {
 
       <article className="py-16">
         <div className="container-page max-w-3xl space-y-5 text-lg leading-relaxed text-foreground/90">
-          {post.body.map((b, i) =>
+          {post.body.map((b: { type: "h2" | "p"; text: string }, i: number) =>
             b.type === "h2" ? (
               <h2 key={i} className="pt-6 text-3xl font-bold text-brand">{b.text}</h2>
             ) : (
