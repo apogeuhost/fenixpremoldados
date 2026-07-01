@@ -29,7 +29,7 @@ function Header() {
       <div className="container-page grid h-20 grid-cols-2 items-center md:grid-cols-3">
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-            <img src={logoAsset.url} alt="Fênix Pré Moldados" className="h-16 w-auto" />
+            <img src={logoAsset.url} alt="Fênix Pré Moldados" className="h-20 w-auto" />
           </Link>
         </div>
         <nav className="hidden items-center justify-center gap-8 md:flex">
