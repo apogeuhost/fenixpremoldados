@@ -55,7 +55,10 @@ function Contato() {
               <MapPin className="h-6 w-6 text-accent" />
               <h3 className="mt-3 text-lg font-semibold text-brand">Endereço</h3>
               <p className="mt-1 text-muted-foreground">
-                R. Álvaro de Freitas, Nº 135 — Esplanada<br />Arcos - MG, 35588-000
+                Área Rural, S/N<br />
+                Bairro: Área Rural de Lagoa da Prata<br />
+                CEP: 35593-899<br />
+                Lagoa da Prata - MG
               </p>
             </div>
             <div className="rounded-xl border border-border bg-card p-6 shadow-card">

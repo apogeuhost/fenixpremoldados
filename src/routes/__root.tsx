@@ -110,8 +110,10 @@ function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wide text-white/90">Contato</h4>
           <ul className="mt-4 space-y-2 text-sm text-white/70">
-            <li>R. Álvaro de Freitas, Nº 135 — Esplanada</li>
-            <li>Arcos - MG, 35588-000</li>
+            <li>Área Rural, S/N</li>
+            <li>Bairro: Área Rural de Lagoa da Prata</li>
+            <li>CEP: 35593-899</li>
+            <li>Lagoa da Prata - MG</li>
             <li>
               <a href="mailto:comercial@fenixpremoldados.com.br" className="hover:text-accent">
                 comercial@fenixpremoldados.com.br

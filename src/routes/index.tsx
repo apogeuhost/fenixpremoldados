@@ -95,9 +95,9 @@ function Home() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-wider text-accent">Serviços</p>
-              <h2 className="mt-2 text-4xl font-bold text-brand">Projetos totalmente personalizados</h2>
+              <h2 className="mt-2 text-4xl font-bold text-brand">Projeto modulado para cada necessidade</h2>
               <p className="mt-3 text-muted-foreground">
-                Projetos sob medida, fabricação própria e execução completa — tudo conforme a necessidade da sua obra.
+                Projeto dimensionado de acordo com a necessidade de cada cliente; sendo fabricado e executado de forma completa, dentro da normatização da NBR vigente e nos mais exigentes padrões de engenharia.
               </p>
             </div>
             <Link to="/contato" className="text-sm font-semibold text-accent hover:underline">
