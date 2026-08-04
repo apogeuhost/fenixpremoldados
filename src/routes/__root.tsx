@@ -120,8 +120,8 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="tel:+5537998560640" className="hover:text-accent">
-                (37) 99856-0640
+              <a href="tel:+5537999037250" className="hover:text-accent">
+                (37) 99903-7250
               </a>
             </li>
             <li className="flex gap-3 pt-2">
@@ -143,7 +143,7 @@ function Footer() {
 function WhatsAppFab() {
   return (
     <a
-      href="https://wa.me/5537998560640"
+      href="https://wa.me/5537999037250"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"

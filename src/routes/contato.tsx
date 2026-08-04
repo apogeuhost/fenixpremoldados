@@ -71,11 +71,11 @@ function Contato() {
             <div className="rounded-xl border border-border bg-card p-6 shadow-card">
               <Phone className="h-6 w-6 text-accent" />
               <h3 className="mt-3 text-lg font-semibold text-brand">Telefone</h3>
-              <a href="tel:+5537998560640" className="mt-1 block text-muted-foreground hover:text-accent">
-                (37) 99856-0640
+              <a href="tel:+5537999037250" className="mt-1 block text-muted-foreground hover:text-accent">
+                (37) 99903-7250
               </a>
               <a
-                href="https://wa.me/5537998560640"
+                href="https://wa.me/5537999037250"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground hover:opacity-90"
